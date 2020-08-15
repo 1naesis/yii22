@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^(www\.)?admin\.domain\.ru$ [NC]
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteRule ^(.*)$ admin/$1 [L]
